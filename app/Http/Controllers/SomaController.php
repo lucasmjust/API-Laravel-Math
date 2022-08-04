@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 class SomaController extends Controller
 {
 
-    public function soma(Request $request){
-        $n1 = $request->input('n1');
-        $n2 = $request->input('n2');
+    public function soma($num1, $num2){
 
+        header("Access-Control-Allow-Origin: *");
 
-        return $n1 + $n2;
+        $result = $num1 + $num2;
+
+        return response()->json(['result' => $result]);
     }
 }

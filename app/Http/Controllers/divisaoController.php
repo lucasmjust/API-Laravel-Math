@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 class divisaoController extends Controller
 {
 
-    public function divisao(Request $request){
-        $n1 = $request->input('n1');
-        $n2 = $request->input('n2');
 
-        return $n1 / $n2;
+    public function divisao($num1, $num2){
+
+        header("Access-Control-Allow-Origin: *");
+
+        $result = $num1 / $num2;
+
+        return response()->json(['result' => $result]);
     }
 }

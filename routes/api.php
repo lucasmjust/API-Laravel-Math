@@ -16,10 +16,10 @@ use Illuminate\Http\Request;
 
 // Route::resource('numeros', 'NumeroController');
 
-Route::get('/soma', 'SomaController@soma');
-Route::get('/subtracao', 'SubtracaoController@subtracao');
-Route::get('/multiplicacao', 'MultiplicacaoController@multiplicacao');
-Route::get('/divisao', 'divisaoController@divisao');
+Route::get('/soma/{num1}/{num2}', 'SomaController@soma');
+Route::get('/subtracao/{num1}/{num2}', 'SubtracaoController@subtracao');
+Route::get('/multiplicacao/{num1}/{num2}', 'MultiplicacaoController@multiplicacao');
+Route::get('/divisao/{num1}/{num2}', 'divisaoController@divisao');
 
 
 

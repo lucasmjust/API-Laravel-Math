@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 class MultiplicacaoController extends Controller
 {
 
-    public function multiplicacao(Request $request){
-        $n1 = $request->input('n1');
-        $n2 = $request->input('n2');
 
-        return $n1 * $n2;
+    public function multiplicacao($num1, $num2){
+
+        header("Access-Control-Allow-Origin: *");
+
+        $result = $num1 * $num2;
+
+        return response()->json(['result' => $result]);
     }
 }
